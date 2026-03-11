@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div class="screen active" id="inicio">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="title-box">
+                <h1 class="pixel-title">GAMING TRIVIA</h1>
+            </div>
+            <button class="btn-primary" onclick="mostrarPantalla('instrucciones')">JUGAR</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Instrucciones -->
+    <div class="screen" id="instrucciones">
+        <div class="background-img"></div>
+        <div class="content">
+            <h1 class="screen-title">INSTRUCCIONES</h1>
+            <div class="instruction-box">
+                <p class="instruction-text">1. Lee las preguntas atentamente.</p>
+                <p class="instruction-text">2. Selecciona la opción que te parezca correcta.</p>
+                <p class="instruction-text">3. Clickea 'SIGUIENTE' para ir a la siguiente pregunta.</p>
+            </div>
+            <button class="btn-primary" onclick="mostrarPantalla('pregunta1')">OK</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 1 -->
+    <div class="screen" id="pregunta1">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 1</h2>
+                <p class="question-text">¿En qué año se lanzó el videojuego Minecraft?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q1" value="0">
+                    <span class="option-text">2009</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="1">
+                    <span class="option-text">2011</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="0">
+                    <span class="option-text">2013</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="0">
+                    <span class="option-text">2015</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="siguientePregunta('pregunta1', 'pregunta2', 'q1')">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="screen" id="pregunta2">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 2</h2>
+                <p class="question-text">¿Quién es el personaje principal de la saga The Legend of Zelda?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q2" value="0">
+                    <span class="option-text">Zelda</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="0">
+                    <span class="option-text">Ganondorf</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="1">
+                    <span class="option-text">Link</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="0">
+                    <span class="option-text">Epona</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="siguientePregunta('pregunta2', 'pregunta3', 'q2')">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="screen" id="pregunta3">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 3</h2>
+                <p class="question-text">¿Qué empresa desarrolló el juego Fortnite?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q3" value="0">
+                    <span class="option-text">Activision</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="1">
+                    <span class="option-text">Epic Games</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="0">
+                    <span class="option-text">Riot Games</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="0">
+                    <span class="option-text">Valve</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="siguientePregunta('pregunta3', 'pregunta4', 'q3')">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="screen" id="pregunta4">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 4</h2>
+                <p class="question-text">¿Cuál de estos juegos NO es un Battle Royale?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q4" value="0">
+                    <span class="option-text">Apex Legends</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="0">
+                    <span class="option-text">PUBG</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="1">
+                    <span class="option-text">Overwatch</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="0">
+                    <span class="option-text">Call of Duty: Warzone</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="siguientePregunta('pregunta4', 'pregunta5', 'q4')">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="screen" id="pregunta5">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 5</h2>
+                <p class="question-text">¿Cómo se llama el fontanero hermano de Mario?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q5" value="0">
+                    <span class="option-text">Wario</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="0">
+                    <span class="option-text">Yoshi</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="1">
+                    <span class="option-text">Luigi</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="0">
+                    <span class="option-text">Toad</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="siguientePregunta('pregunta5', 'pregunta6', 'q5')">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pregunta 6 -->
+    <div class="screen" id="pregunta6">
+        <div class="background-img"></div>
+        <div class="content">
+            <div class="question-box">
+                <h2 class="question-title">Pregunta 6</h2>
+                <p class="question-text">¿En qué videojuego aparece el personaje "Master Chief"?</p>
+            </div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q6" value="0">
+                    <span class="option-text">Destiny</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="1">
+                    <span class="option-text">Halo</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="0">
+                    <span class="option-text">Gears of War</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="0">
+                    <span class="option-text">Call of Duty</span>
+                </label>
+            </div>
+            <button class="btn-continue" onclick="calcularResultados()">SIGUIENTE</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Resultados -->
+    <div class="screen" id="resultados">
+        <div class="background-img"></div>
+        <div class="content">
+            <h1 class="screen-title">RESULTADOS</h1>
+            <div class="result-box">
+                <p class="result-label">PUNTAJE:</p>
+                <p class="result-score" id="puntaje">0/6</p>
+                <p class="result-message" id="mensaje"></p>
+            </div>
+            <button class="btn-primary" onclick="reiniciarJuego()">VOLVER A JUGAR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
